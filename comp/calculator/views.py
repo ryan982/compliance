@@ -16,8 +16,6 @@ def calculator(request):
             tds_amount  = (tds*amount)/100
             bal_payable = total - tds_amount
            
-            
-    # form = Calculate()
             return render(request, 'index.html', {'gst_amt':gst_amount,'total': total, 'tds_amt':tds_amount, 'bal_payable':bal_payable})
 
     return render(request, "index.html")
